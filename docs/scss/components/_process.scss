@@ -1,0 +1,155 @@
+@use "../variables" as *;
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  padding: 14px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+  margin-top: 30px;
+
+  @media (min-width: 768px) {
+    margin-top: 50px;
+  }
+
+  &--primary {
+    background: $primary-600;
+    color: $primary;
+
+    &:hover {
+      background: $highlight-yellow;
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}
+
+.process {
+  padding: 20px;
+
+  @media (min-width: 1200px) {
+    padding: 20px 50px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 20px 70px;
+  }
+
+  &__container {
+    max-width: $container;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $primary;
+    font-weight: 800;
+    margin-bottom: 30px;
+    font-size: 25px;
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 75px;
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 90px;
+    }
+  }
+
+  &__steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (min-width: 1200px) {
+      padding: 0 50px;
+    }
+    @media (min-width: 1400px) {
+      padding: 0 100px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -15px;
+      height: 15px;
+      background: #20222b;
+      border-radius: 15px;
+    }
+  }
+
+  &__step {
+    padding: 20px clamp(12px, 2vw, 18px) 28px;
+    color: $text;
+    border-left: 1px solid #20222b;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.45;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__index {
+    font-weight: 900;
+    font-size: 25px;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 44px;
+    }
+  }
+
+  &__cta {
+    margin-top: clamp(36px, 6vw, 56px);
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    &__steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__steps {
+      grid-template-columns: 1fr;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__step {
+      border-left: none;
+      border-top: 1px solid #20222b;
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+  }
+}

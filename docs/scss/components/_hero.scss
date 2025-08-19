@@ -1,0 +1,144 @@
+@use "../variables" as *;
+
+.hero {
+  .wrap {
+    align-items: center;
+    max-width: $container;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (min-width: 768px) {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 20px 50px;
+    }
+
+    @media (min-width: 1440px) {
+      padding: 20px 70px;
+    }
+  }
+
+  .hero-left {
+    @media (min-width: 768px) {
+    }
+  }
+
+  .hero-right {
+    @media (min-width: 768px) {
+      max-width: 60%;
+      flex: 1 1 60%;
+    }
+  }
+
+  .title {
+    color: $primary;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1.06;
+    letter-spacing: 0.2px;
+    margin: 0 0 18px;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      left: 20px;
+      top: 30px;
+      width: 500px;
+      font-size: 60px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 80px;
+      width: 650px;
+      top: 50px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 90px;
+      width: 700px;
+      left: 70px;
+      top: 150px;
+    }
+  }
+
+  .title .hl {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+  }
+
+  .title .hl::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    right: -6px;
+    bottom: 6px;
+    height: 0.55em;
+    background: $highlight-yellow;
+    z-index: -1;
+    border-radius: 6px;
+  }
+
+  .lead {
+    color: $text;
+    font-size: 18px;
+    margin: 0 0 20px;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      left: 20px;
+      top: 300px;
+      width: 500px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 24px;
+      top: 400px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 28px;
+      top: 550px;
+      left: 70px;
+    }
+  }
+
+  .illustration {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    margin-top: 50px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  .btn {
+    @media (min-width: 768px) {
+      position: relative;
+      top: 160px;
+    }
+
+    @media (min-width: 992px) {
+      top: 220px;
+    }
+
+    @media (min-width: 1200px) {
+      top: 300px;
+    }
+  }
+
+  @media (max-width: 980px) {
+    .wrap {
+      grid-template-columns: 1fr;
+    }
+    .illustration {
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  }
+}
