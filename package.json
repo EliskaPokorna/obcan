@@ -1,0 +1,19 @@
+{
+  "name": "obcan-cz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"sass --watch src/scss:public/css\" \"live-server public --open=./index.html\"",
+    "build": "sass src/scss:public/css --no-source-map --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "live-server": "^1.2.2",
+    "sass": "^1.90.0"
+  }
+}
