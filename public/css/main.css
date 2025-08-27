@@ -666,14 +666,15 @@ a:hover {
     font-size: 90px;
   }
 }
-.hero .title .hl {
+.hero .title .hl,
+.hero .title .hl2 {
   position: relative;
   display: inline-block;
 }
 .hero .title .hl::after {
   content: "";
   position: absolute;
-  left: -40px;
+  left: -10px;
   right: -6px;
   bottom: 6px;
   height: 35px;
@@ -686,27 +687,63 @@ a:hover {
   .hero .title .hl::after {
     height: 45px;
     width: 110px;
-    left: -50px;
+    left: -10px;
   }
 }
 @media (min-width: 992px) {
   .hero .title .hl::after {
     height: 62px;
     width: 140px;
-    left: -60px;
   }
 }
 @media (min-width: 1200px) {
   .hero .title .hl::after {
     height: 62px;
-    width: 168px;
-    left: -70px;
+    width: 155px;
   }
 }
 @media (min-width: 1440px) {
   .hero .title .hl::after {
-    bottom: 18px;
-    left: -60px;
+    bottom: 15px;
+    height: 70px;
+    width: 168px;
+  }
+}
+.hero .title .hl2::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -6px;
+  bottom: 6px;
+  height: 35px;
+  width: 140px;
+  background: #ffc857;
+  z-index: -1;
+  border-radius: 50px;
+}
+@media (min-width: 768px) {
+  .hero .title .hl2::after {
+    height: 45px;
+    width: 160px;
+  }
+}
+@media (min-width: 992px) {
+  .hero .title .hl2::after {
+    height: 62px;
+    width: 215px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero .title .hl2::after {
+    height: 62px;
+    width: 235px;
+  }
+}
+@media (min-width: 1440px) {
+  .hero .title .hl2::after {
+    bottom: 15px;
+    height: 70px;
+    width: 270px;
   }
 }
 .hero .lead {
