@@ -100,6 +100,8 @@ a:hover {
 }
 
 .benefits-title {
+  position: relative;
+  z-index: 1;
   text-align: center;
   font-weight: 700;
   font-size: 25px;
@@ -128,17 +130,37 @@ a:hover {
 .benefits-title .pill {
   position: relative;
   display: inline-block;
-  z-index: 0;
 }
 
 .benefits-title .pill::before {
   content: "";
   position: absolute;
-  inset: auto 0 -0.15em 0;
-  height: 0.8em;
-  background: #ffd27a;
-  border-radius: 10px;
+  left: -5px;
+  bottom: -3px;
+  height: 35px;
+  width: 100px;
+  background: #ffc857;
+  border-radius: 50px;
   z-index: -1;
+}
+@media (min-width: 768px) {
+  .benefits-title .pill::before {
+    height: 74px;
+    width: 240px;
+  }
+}
+@media (min-width: 992px) {
+  .benefits-title .pill::before {
+    width: 300px;
+    bottom: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .benefits-title .pill::before {
+    height: 74px;
+    width: 355px;
+    bottom: 18px;
+  }
 }
 
 /* Grid 2 sloupce, 1 na mobilu */
@@ -430,16 +452,26 @@ a:hover {
     min-height: 220px;
   }
 }
+[id] {
+  scroll-margin-top: 140px;
+}
+
+#kontakt-obcan-plus-heading {
+  scroll-margin-top: 200px;
+}
+
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
   background: #f2f4f5;
   padding: 20px;
+  position: relative;
+  z-index: 10;
   /* CTA pilulka jako „Chci digitální obec“ */
 }
 @media (min-width: 1200px) {
   .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     padding: 20px 50px;
   }
 }
@@ -527,6 +559,18 @@ a:hover {
   font-size: 28px;
   cursor: pointer;
 }
+.site-header .menu-toggle .icon {
+  display: none;
+}
+.site-header .menu-toggle .icon-menu {
+  display: block;
+}
+.site-header .menu-toggle.open .icon-menu {
+  display: none;
+}
+.site-header .menu-toggle.open .icon-close {
+  display: block;
+}
 @media (max-width: 767px) {
   .site-header .menu-toggle {
     display: block;
@@ -584,6 +628,8 @@ a:hover {
   }
 }
 .hero .title {
+  position: relative;
+  z-index: 1;
   color: #005840;
   font-weight: 900;
   font-size: 40px;
@@ -597,39 +643,71 @@ a:hover {
     left: 20px;
     top: 30px;
     width: 500px;
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 @media (min-width: 992px) {
   .hero .title {
-    font-size: 80px;
+    font-size: 68px;
     width: 650px;
     top: 50px;
   }
 }
 @media (min-width: 1200px) {
   .hero .title {
-    font-size: 90px;
+    font-size: 76px;
     width: 700px;
     left: 70px;
     top: 150px;
   }
 }
+@media (min-width: 1440px) {
+  .hero .title {
+    font-size: 90px;
+  }
+}
 .hero .title .hl {
   position: relative;
   display: inline-block;
-  z-index: 0;
 }
 .hero .title .hl::after {
   content: "";
   position: absolute;
-  left: -6px;
+  left: -40px;
   right: -6px;
   bottom: 6px;
-  height: 0.55em;
+  height: 35px;
+  width: 90px;
   background: #ffc857;
   z-index: -1;
-  border-radius: 6px;
+  border-radius: 50px;
+}
+@media (min-width: 768px) {
+  .hero .title .hl::after {
+    height: 45px;
+    width: 110px;
+    left: -50px;
+  }
+}
+@media (min-width: 992px) {
+  .hero .title .hl::after {
+    height: 62px;
+    width: 140px;
+    left: -60px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero .title .hl::after {
+    height: 62px;
+    width: 168px;
+    left: -70px;
+  }
+}
+@media (min-width: 1440px) {
+  .hero .title .hl::after {
+    bottom: 18px;
+    left: -60px;
+  }
 }
 .hero .lead {
   color: #000000;
@@ -720,12 +798,25 @@ a:hover {
 .info-title .pill {
   background-color: #ffc857;
   border-radius: 50px;
-  padding: 0.1em 0.4em;
+  width: 250px;
+  height: 30px;
   display: inline-block;
   font-weight: 800;
   color: #005840;
+  position: relative;
+  bottom: -5px;
 }
-
+@media (min-width: 768px) {
+  .info-title .pill {
+    width: 600px;
+    height: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .info-title .pill {
+    width: 704px;
+  }
+}
 .btn {
   display: inline-block;
   font-weight: 400;

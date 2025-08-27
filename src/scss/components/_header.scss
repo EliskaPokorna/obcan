@@ -1,13 +1,23 @@
 @use "../variables" as *;
 
+[id] {
+  scroll-margin-top: 140px;
+}
+
+#kontakt-obcan-plus-heading {
+  scroll-margin-top: 200px;
+}
+
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
   background: $bg;
   padding: 20px;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: 1200px) {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     padding: 20px 50px;
   }
 
@@ -101,6 +111,23 @@
     background: transparent;
     font-size: 28px;
     cursor: pointer;
+
+    .icon {
+      display: none;
+    }
+
+    .icon-menu {
+      display: block;
+    }
+
+    &.open {
+      .icon-menu {
+        display: none;
+      }
+      .icon-close {
+        display: block;
+      }
+    }
   }
 
   @media (max-width: 767px) {

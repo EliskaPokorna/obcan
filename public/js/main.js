@@ -4,12 +4,17 @@ const nav = document.getElementById('mainNav');
 
 btn?.addEventListener('click', () => {
   nav?.classList.toggle('open');
+  btn.classList.toggle('open');
 });
 
-// Zavřít menu po kliknutí na odkaz (na mobilu)
+// Zavření menu po kliknutí na odkaz
 nav?.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => nav.classList.remove('open'));
+  a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+  });
 });
+
 
 
 

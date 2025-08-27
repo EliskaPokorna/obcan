@@ -35,6 +35,8 @@
   }
 
   .title {
+    position: relative;
+    z-index: 1;
     color: $primary;
     font-weight: 900;
     font-size: 40px;
@@ -47,39 +49,66 @@
       left: 20px;
       top: 30px;
       width: 500px;
-      font-size: 60px;
+      font-size: 50px;
     }
 
     @media (min-width: 992px) {
-      font-size: 80px;
+      font-size: 68px;
       width: 650px;
       top: 50px;
     }
 
     @media (min-width: 1200px) {
-      font-size: 90px;
+      font-size: 76px;
       width: 700px;
       left: 70px;
       top: 150px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 90px;
     }
   }
 
   .title .hl {
     position: relative;
     display: inline-block;
-    z-index: 0;
   }
 
   .title .hl::after {
     content: "";
     position: absolute;
-    left: -6px;
+    left: -40px;
     right: -6px;
     bottom: 6px;
-    height: 0.55em;
+    height: 35px;
+    width: 90px;
     background: $highlight-yellow;
     z-index: -1;
-    border-radius: 6px;
+    border-radius: 50px;
+
+    @media (min-width: 768px) {
+      height: 45px;
+      width: 110px;
+      left: -50px;
+    }
+
+    @media (min-width: 992px) {
+      height: 62px;
+      width: 140px;
+      left: -60px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 62px;
+      width: 168px;
+      left: -70px;
+    }
+
+    @media (min-width: 1440px) {
+      bottom: 18px;
+      left: -60px;
+    }
   }
 
   .lead {

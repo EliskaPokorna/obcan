@@ -23,9 +23,24 @@
   .pill {
     background-color: $highlight-yellow;
     border-radius: 50px;
-    padding: 0.1em 0.4em;
+    width: 250px;
+    height: 30px;
     display: inline-block;
     font-weight: 800;
     color: $primary;
+    position: relative;
+    bottom: -5px;
+
+    @media (min-width: 768px) {
+      width: 600px;
+      height: 80px;
+    }
+
+    @media (min-width: 992px) {
+      width: 704px;
+    }
+
+    @media (min-width: 1200px) {
+    }
   }
 }

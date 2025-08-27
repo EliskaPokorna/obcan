@@ -58,6 +58,8 @@
 }
 
 .benefits-title {
+  position: relative;
+  z-index: 1;
   text-align: center;
   font-weight: 700;
   font-size: 25px;
@@ -83,17 +85,34 @@
 .benefits-title .pill {
   position: relative;
   display: inline-block;
-  z-index: 0;
 }
 
 .benefits-title .pill::before {
   content: "";
   position: absolute;
-  inset: auto 0 -0.15em 0;
-  height: 0.8em;
-  background: #ffd27a;
-  border-radius: 10px;
+  left: -5px;
+  bottom: -3px;
+  height: 35px;
+  width: 100px;
+  background: $highlight-yellow;
+  border-radius: 50px;
   z-index: -1;
+
+  @media (min-width: 768px) {
+    height: 74px;
+    width: 240px;
+  }
+
+  @media (min-width: 992px) {
+    width: 300px;
+    bottom: 10px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 74px;
+    width: 355px;
+    bottom: 18px;
+  }
 }
 
 /* Grid 2 sloupce, 1 na mobilu */
