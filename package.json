@@ -4,8 +4,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"sass --watch src/scss:public/css\" \"live-server public --open=./index.html\"",
-    "build": "sass src/scss:public/css --no-source-map --style=compressed"
+    "dev": "concurrently \"sass --watch src/scss:docs/css\" \"live-server docs --open=./index.html\"",
+    "build": "sass src/scss:docs/css --no-source-map --style=compressed"
   },
   "keywords": [],
   "author": "",
