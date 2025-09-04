@@ -13,7 +13,7 @@
   &::before {
     @media (min-width: 768px) {
       content: "";
-      background: url(/images/green-bg.png) no-repeat center / cover;
+      background: url(../images/green-bg.png) no-repeat center / cover;
       position: absolute;
       left: 0;
       right: 0;
