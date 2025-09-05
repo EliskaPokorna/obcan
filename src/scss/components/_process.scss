@@ -1,7 +1,8 @@
 @use "../variables" as *;
 
 .btn {
-  display: inline-block;
+  //display: inline-block;
+  display: none;
   font-weight: 400;
   padding: 14px 22px;
   border-radius: 30px;
@@ -27,6 +28,7 @@
 
 .process {
   padding: 20px;
+  display: none;
 
   @media (min-width: 1200px) {
     padding: 20px 50px;

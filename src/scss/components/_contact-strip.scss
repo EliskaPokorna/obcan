@@ -127,6 +127,7 @@
     textarea {
       width: 100%;
       border: 0;
+      color: $white;
       outline: 0;
       border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
       padding: 5px 0 12px;
@@ -153,6 +154,15 @@
       &:user-valid,
       &.is-valid {
         border-color: $brand-green-600;
+      }
+    }
+
+    textarea {
+      &:user-invalid,
+      &.is-invalid,
+      &:user-valid,
+      &.is-valid {
+        color: $text;
       }
     }
 
@@ -222,6 +232,35 @@
       color: $white;
     }
   }
+
+  .contact-form__gdpr {
+    color: $white;
+    margin-top: 5px;
+
+    a {
+      color: $white;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: $white; /* bílý text */
+  -webkit-box-shadow: 0 0 0 1000px transparent inset; /* transparentní pozadí */
+  box-shadow: 0 0 0 1000px transparent inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Firefox */
+input:-moz-autofill {
+  color: $white; /* bílý text */
+  box-shadow: 0 0 0 1000px transparent inset; /* transparentní pozadí */
 }
 
 /* Responsivita */

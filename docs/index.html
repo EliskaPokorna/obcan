@@ -30,7 +30,7 @@
         <ul>
           <li><a href="#sluzby">O portálu</a></li>
           <li><a href="#vyhody">Výhody</a></li>
-          <li><a href="#process">Jak to funguje</a></li>
+      <!--<li><a href="#process">Jak to funguje</a></li>-->
           <li><a href="#kontakt-obcan-plus-heading">Kontakt</a></li>
           <li class="nav-cta"><a href="#kontakt-obcan-plus-heading">Chci digitální obec</a></li>
         </ul>
@@ -209,12 +209,12 @@
             class="contact-form"
             id="contactForm"
             method="POST"
-            action="https://formsubmit.co/pokornaeliska25@gmail.com"
+            action="https://formsubmit.co/podpora@igalileo.cz"
           >
             <input type="hidden" name="_subject" value="Zájem o portál Občan+">
             <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_captcha" value="false">          <!-- vypne captcha -->
-            <input type="text" name="_honey" style="display:none">        <!-- honeypot proti botům -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
 
             <!-- Tvoje pole (beze změny názvů) -->
             <label class="contact-form__field">
@@ -245,6 +245,7 @@
               <span class="contact-form-text">Zpráva</span>
               <textarea name="message" rows="6" required></textarea>
               <small class="contact-form__error" data-error-for="message"></small>
+              <span class="contact-form__gdpr">Odesláním formuláře souhlasíte s <a href="#">Podmínkami ochrany osobních údajů.</a></span>
             </label>
 
             <div class="contact-form__actions">
@@ -266,7 +267,7 @@
 
       <nav class="site-footer__nav" aria-label="Spodní navigace">
         <ul class="site-footer__menu">
-          <li><a href="#">Cookies</a></li>
+          <li><a href="cookies.pdf" download="cookies.pdf">Cookies</a></li>
           <li><a href="#">Zásady ochrany osobních údajů</a></li>
           <li  class="site-footer__copy">©2025 Občan+</li>
         </ul>
@@ -275,7 +276,7 @@
       <nav class="site-footer__nav" aria-label="Spodní navigace">
         <ul class="site-footer__menu">
           <li><a href="#sluzby">O portálu</a></li>
-          <li><a href="#process">Jak to funguje</a></li>
+      <!--<li><a href="#process">Jak to funguje</a></li>-->
           <li><a href="#vyhody">Výhody</a></li>
           <li><a href="#kontakt-obcan-plus-heading">Kontakt</a></li>
         </ul>
@@ -283,6 +284,106 @@
     </div>
   </footer>
 
+  <section id="cc-banner" role="region" aria-label="Nastavení cookies" class="cc-hidden">
+    <div class="cc-inner">
+      <div>
+        <h2 class="cc-title">Používáme cookies</h2>
+        <p class="cc-text">
+          Na tomto webu používáme soubory cookies, abychom zajistili správné fungování a bezpečnost portálu. Další cookies zapínáme pouze s Vaším souhlasem – pomáhají nám porozumět návštěvnosti a zlepšovat služby i zobrazovaný obsah.
+          <!--<a class="cc-link" href="/zasady-cookies" target="_blank" rel="noopener">Zásady cookies</a>-->
+        </p>
+      </div>
+      <div class="cc-actions" aria-label="Akce souhlasu">
+        <button class="cc-btn ghost" id="cc-reject">Odmítnout</button>
+        <button class="cc-btn secondary" id="cc-customize">Přizpůsobit</button>
+        <button class="cc-btn primary" id="cc-accept">Přijmout vše</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="cc-modal-backdrop" class="cc-hidden" aria-hidden="true">
+    <div id="cc-modal" role="dialog" aria-modal="true" aria-labelledby="cc-modal-title" tabindex="-1">
+      <div class="cc-modal-head">
+        <h3 id="cc-modal-title" class="cc-modal-title">Přizpůsobit cookies</h3>
+        <button class="cc-x" id="cc-close" aria-label="Zavřít">✕</button>
+      </div>
+        <div class="cc-modal-body">
+          <!-- Kategorie podle účelu -->
+          <div class="cc-cat">
+            <div>
+              <h4>Nezbytné</h4>
+              <p>Zajišťují bezpečný a spolehlivý provoz portálu (zabezpečení, přihlášení, navigace). Vždy aktivní.</p>
+            </div>
+            <div class="cc-switch">
+              <label class="visually-hidden" for="cc-necessary">Nezbytné</label>
+              <input id="cc-necessary" type="checkbox" checked disabled aria-disabled="true" />
+            </div>
+          </div>
+
+          <div class="cc-cat">
+            <div>
+              <h4>Analytické</h4>
+              <p>Pomáhají nám pochopit, jak je web používán, vytvářet anonymní souhrnné statistiky a zlepšovat služby.</p>
+            </div>
+            <div class="cc-switch">
+              <label class="visually-hidden" for="cc-analytics">Analytické</label>
+              <input id="cc-analytics" type="checkbox" />
+            </div>
+          </div>
+
+          <div class="cc-cat">
+            <div>
+              <h4>Marketingové</h4>
+              <p>Umožňují personalizovaný obsah a měření kampaní (pouze se souhlasem).</p>
+            </div>
+            <div class="cc-switch">
+              <label class="visually-hidden" for="cc-marketing">Marketingové</label>
+              <input id="cc-marketing" type="checkbox" />
+            </div>
+          </div>
+
+          <!-- Podrobné informace (akordeon) -->
+          <div class="cc-info">
+            <details>
+              <summary>Co jsou soubory cookies?</summary>
+              <p>Cookies jsou krátké textové soubory, které web posílá do vašeho prohlížeče. Umožňují webu pamatovat si např. jazyk a další nastavení, aby byla příští návštěva snazší a produktivnější.</p>
+            </details>
+
+            <details>
+              <summary>Co jsou pixelové značky (web beacons)?</summary>
+              <p>Jde o malé obrázky s podobnou funkcí jako cookies. Na rozdíl od cookies jsou pevnou součástí stránky. Pro zjednodušení o nich mluvíme společně jako o „cookies“.</p>
+            </details>
+
+            <details>
+              <summary>Proč cookies používáme?</summary>
+              <p>Pro nastavení obsahu vzhledem k preferencím uživatele, pro optimalizaci využití webu a pro anonymní, souhrnné statistiky o používání, které nám pomáhají zlepšovat strukturu a obsah stránek.</p>
+            </details>
+
+            <details>
+              <summary>Typy cookies – podle <u>účelu</u> a <u>doby trvání</u></summary>
+              <ul>
+                <li><strong>Analytické</strong> – sběr informací o využívání webu (odkud jste přišli, počet návštěv, agregované statistiky). Nezaznamenávají osobní údaje, používají se ke statistikám.</li>
+                <li><strong>Dynamické (relační)</strong> – dočasné soubory ukládající informace o relacích, které umožňují plynulou navigaci bez opakovaného vyplňování. Mažou se po zavření prohlížeče.</li>
+                <li><strong>Trvalé</strong> – zůstávají ve vašem zařízení, dokud je nesmažete (případně do vypršení doby platnosti).</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>Jak mohu cookies odstranit nebo zablokovat?</summary>
+              <p>V nastavení prohlížeče můžete používání cookies omezit nebo odmítnout (většina prohlížečů je má ve výchozím stavu povolené). Omezení může ovlivnit některé funkce důležité pro správný provoz webu. Návody hledejte u svého prohlížeče – např. Google Chrome, Mozilla Firefox, Microsoft Edge nebo Safari.</p>
+            </details>
+          </div>
+
+          <p class="cc-help">Podrobnosti najdete v <a class="cc-link" href="cookies.pdf" download="cookies.pdf" target="_blank" rel="noopener">Zásadách cookies</a>. Volby můžete kdykoli změnit přes odkaz „Cookies“ v patičce.</p>
+        </div>
+      <div class="cc-modal-foot">
+        <button class="cc-btn secondary" id="cc-save">Uložit výběr</button>
+        <button class="cc-btn primary" id="cc-accept-2">Přijmout vše</button>
+      </div>
+    </div>
+  </div>
+
   <script defer src="./js/main.js"></script>
+  <script defer src="./js/cookies.js"></script>
 </body>
 </html>
