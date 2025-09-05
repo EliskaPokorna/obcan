@@ -1,7 +1,7 @@
 (function(){
     const STORAGE_KEY = "cookieConsent.v1";
     const CONSENT_TTL_DAYS = 180;
-    const TEST_MODE_ALWAYS_SHOW = true; // ← produkce: false (na test dej true)
+    const TEST_MODE_ALWAYS_SHOW = false; // ← produkce: false (na test dej true)
 
     const now = () => new Date().toISOString();
     const $ = s => document.querySelector(s);
