@@ -333,6 +333,13 @@ a:hover {
     font-size: 42px;
   }
 }
+.contact-strip__right .contact-strip__text a {
+  color: #fff;
+  text-decoration: underline;
+}
+.contact-strip__right .contact-strip__text a:hover {
+  text-decoration: none;
+}
 .contact-strip__title {
   font-size: clamp(22px, 3.6vw, 34px);
   line-height: 1.15;
@@ -343,121 +350,143 @@ a:hover {
 }
 
 /* Formulář */
-.contact-form {
+/*.contact-form {
   display: grid;
   gap: 14px;
-}
-.contact-form__field {
-  display: grid;
-  gap: 2px;
-}
-.contact-form__field span {
-  font-size: 0.95rem;
-  opacity: 0.95;
-}
-.contact-form__field input,
-.contact-form__field textarea {
-  width: 100%;
-  border: 0;
-  color: #fff;
-  outline: 0;
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
-  padding: 5px 0 12px;
-  background: transparent;
-  transition: border-color 0.2s ease;
-}
-.contact-form__field input .contact-form-text,
-.contact-form__field textarea .contact-form-text {
-  color: #fff;
-}
-.contact-form__field input::placeholder,
-.contact-form__field textarea::placeholder {
-  color: rgba(255, 255, 255, 0.55);
-}
-.contact-form__field input:focus,
-.contact-form__field textarea:focus {
-  border-color: #ffc857;
-}
-.contact-form__field input:user-invalid, .contact-form__field input.is-invalid,
-.contact-form__field textarea:user-invalid,
-.contact-form__field textarea.is-invalid {
-  border-color: #ec734b;
-}
-.contact-form__field input:user-valid, .contact-form__field input.is-valid,
-.contact-form__field textarea:user-valid,
-.contact-form__field textarea.is-valid {
-  border-color: #26d17c;
-}
-.contact-form__field textarea:user-invalid, .contact-form__field textarea.is-invalid, .contact-form__field textarea:user-valid, .contact-form__field textarea.is-valid {
-  color: #000000;
-}
-.contact-form__field--textarea {
-  color: #000000;
-}
-.contact-form__field--textarea .contact-form-text {
-  color: #fff;
-  margin-bottom: 5px;
-}
-.contact-form__field--textarea textarea {
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  padding: 12px 14px;
-  min-height: 140px;
-  background: #fff;
-  width: calc(100% - 30px);
-}
-.contact-form__error {
-  color: #fff;
-  font-size: 0.8rem;
-  min-height: 1em;
-}
-.contact-form__actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: 4px;
-}
-.contact-form__submit {
-  appearance: none;
-  border: 0;
-  cursor: pointer;
-  margin-left: auto;
-  padding: 12px 40px;
-  border-radius: 999px;
-  font-weight: 400;
-  font-size: 20px;
-  background: #26d17c;
-  color: #005840;
-}
-.contact-form__submit:hover {
-  background: #ffc857;
-  text-decoration: none;
-}
-.contact-form__submit:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-.contact-form__status {
-  font-size: 0.93rem;
-  opacity: 0.9;
-}
-.contact-form__status.is-success {
-  color: #26d17c;
-}
-.contact-form__status.is-error {
-  color: #fff;
-}
-.contact-form .contact-form__gdpr {
-  color: #fff;
-  margin-top: 5px;
-}
-.contact-form .contact-form__gdpr a {
-  color: #fff;
-  text-decoration: underline;
-}
-.contact-form .contact-form__gdpr a:hover {
-  text-decoration: none;
-}
 
+  &__field {
+    display: grid;
+    gap: 2px;
+
+    span {
+      font-size: 0.95rem;
+      opacity: 0.95;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 0;
+      color: $white;
+      outline: 0;
+      border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+      padding: 5px 0 12px;
+      background: transparent;
+      transition: border-color 0.2s ease;
+
+      .contact-form-text {
+        color: $white;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      &:focus {
+        border-color: $highlight-yellow;
+      }
+
+      &:user-invalid,
+      &.is-invalid {
+        border-color: $accent-orange;
+      }
+
+      &:user-valid,
+      &.is-valid {
+        border-color: $brand-green-600;
+      }
+    }
+
+    textarea {
+      &:user-invalid,
+      &.is-invalid,
+      &:user-valid,
+      &.is-valid {
+        color: $text;
+      }
+    }
+
+    &--textarea {
+      color: $text;
+
+      .contact-form-text {
+        color: $white;
+        margin-bottom: 5px;
+      }
+
+      textarea {
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        padding: 12px 14px;
+        min-height: 140px;
+        background: $white;
+        width: calc(100% - 30px);
+      }
+    }
+  }
+
+  &__error {
+    color: $white;
+    font-size: 0.8rem;
+    min-height: 1em;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+  }
+
+  &__submit {
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 12px 40px;
+    border-radius: 999px;
+    font-weight: 400;
+    font-size: 20px;
+    background: $brand-green-600;
+    color: $primary;
+
+    &:hover {
+      background: $highlight-yellow;
+      text-decoration: none;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__status {
+    font-size: 0.93rem;
+    opacity: 0.9;
+
+    &.is-success {
+      color: $brand-green-600;
+    }
+
+    &.is-error {
+      color: $white;
+    }
+  }
+
+  .contact-form__gdpr {
+    color: $white;
+    margin-top: 5px;
+
+    a {
+      color: $white;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
@@ -1459,6 +1488,7 @@ input:-moz-autofill {
 }
 .site-footer__brand .site-footer__logo {
   width: 145px;
+  margin-bottom: 30px;
 }
 .site-footer__nav {
   display: grid;
@@ -1488,9 +1518,20 @@ input:-moz-autofill {
   opacity: 1;
   text-decoration-thickness: 0.13rem;
 }
+.site-footer__menu li {
+  font-size: 20px;
+}
+.site-footer__menu .site-footer__ico {
+  margin: 20px 0;
+}
+.site-footer__menu .site-footer__text {
+  font-size: 16px;
+}
 .site-footer__copy {
   text-decoration: none;
-  margin-top: 50px;
+  width: fit-content;
+  margin: 20px auto 0 auto;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 900px) {
@@ -1499,7 +1540,7 @@ input:-moz-autofill {
     text-align: center;
   }
   .site-footer__copy {
-    justify-self: center;
+    text-align: center;
   }
   .site-footer__nav {
     grid-auto-flow: row;

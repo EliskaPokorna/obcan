@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Občan +</title>
   <link rel="stylesheet" href="./css/main.css" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,7 +206,16 @@
             Mám zájem<br>o portál Občan+
           </h2>
 
-          <form
+          <h3 class="contact-strip__subtitle">Kontaktujte nás pro více informací a nezávaznou nabídku.</h3>
+          <p class="contact-strip__text"><strong>Telefon:</strong> <a href="">+420 226 257 055</a></p>
+          <p class="contact-strip__text">
+            <strong>E-mail:</strong>
+            <a href="mailto:podpora@obcanplus.cz?subject=Nezávazná%20poptávka%20portálu%20Občan%2B&body=Dobrý%20den,%0D%0A%0D%0Arádi%20bychom%20získali%20více%20informací%20o%20portálu%20Občan%2B%20a%20jeho%20fungování.%0D%0AJako%20obec%20máme%20zájem%20o%20nezávazné%20seznámení%20s%20možnostmi%20portálu%20Občan%2B%20a%20případné%20podklady%20či%20prezentaci,%20které%20nám%20pomohou%20lépe%20porozumět%20jeho%20výhodám%20pro%20náš%20úřad.%0D%0A%0D%0AProsíme%20o%20zaslání%20informací%20na%20náš%20email%20[vase%20emailova%20adresa]%20nebo%20návrh%20termínu%20krátké%20konzultace.%0D%0A%0D%0ADěkujeme.%0D%0A[jméno%20starosty]%0D%0AStarosta%20obce%20[název%20obce]">
+              podpora@obcanplus.cz
+            </a>
+          </p>
+
+          <!--<form
             class="contact-form"
             id="contactForm"
             method="POST"
@@ -216,7 +226,6 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="_honey" style="display:none">
 
-            <!-- Tvoje pole (beze změny názvů) -->
             <label class="contact-form__field">
               <span class="contact-form-text">Jméno a příjmení</span>
               <input type="text" name="name" required autocomplete="name" />
@@ -252,7 +261,7 @@
               <button class="contact-form__submit" type="submit">Odeslat</button>
               <div class="contact-form__status" role="status" aria-live="polite"></div>
             </div>
-          </form>
+          </form>-->
         </div>
       </div>
     </section>
@@ -263,13 +272,19 @@
     <div class="site-footer__inner">
       <div class="site-footer__brand">
         <div class="site-footer__logo"><img src="./images/logo-footer.png" alt="logo-footer"></div>
+        <ul class="site-footer__menu">
+          <li><strong>Občan plus s.r.o.</strong></li>
+          <li>Březenecká 4808,</li>
+          <li>430 04 Chomutov</li>
+          <li class="site-footer__ico">IČO: 23708549</li>
+          <li class="site-footer__text">Zapsáno v obchodním rejstříku<br>vedeném u Krajského soudu v Ústí<br>nad Labem, oddíl C, vložka 54558</li>
+        </ul>
       </div>
 
       <nav class="site-footer__nav" aria-label="Spodní navigace">
         <ul class="site-footer__menu">
           <li><a href="cookies.pdf" download="cookies.pdf">Cookies</a></li>
           <li><a href="#">Zásady ochrany osobních údajů</a></li>
-          <li  class="site-footer__copy">©2025 Občan+</li>
         </ul>
       </nav>
 
@@ -282,6 +297,8 @@
         </ul>
       </nav>
     </div>
+
+    <p  class="site-footer__copy">©2025 Občan+</p>
   </footer>
 
   <section id="cc-banner" role="region" aria-label="Nastavení cookies" class="cc-hidden">

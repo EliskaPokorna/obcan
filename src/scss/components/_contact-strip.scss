@@ -96,6 +96,20 @@
         font-size: 42px;
       }
     }
+
+    .contact-strip__subtitle {
+    }
+
+    .contact-strip__text {
+      a {
+        color: $white;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   &__title {
@@ -110,7 +124,7 @@
 }
 
 /* Formulář */
-.contact-form {
+/*.contact-form {
   display: grid;
   gap: 14px;
 
@@ -246,7 +260,7 @@
       }
     }
   }
-}
+}*/
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

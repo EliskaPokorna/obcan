@@ -28,6 +28,7 @@
   &__brand {
     .site-footer__logo {
       width: 145px;
+      margin-bottom: 30px;
     }
   }
 
@@ -61,11 +62,25 @@
         text-decoration-thickness: 0.13rem;
       }
     }
+
+    li {
+      font-size: 20px;
+    }
+
+    .site-footer__ico {
+      margin: 20px 0;
+    }
+
+    .site-footer__text {
+      font-size: 16px;
+    }
   }
 
   &__copy {
     text-decoration: none;
-    margin-top: 50px;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    padding-bottom: 30px;
   }
 }
 
@@ -76,7 +91,7 @@
   }
 
   .site-footer__copy {
-    justify-self: center;
+    text-align: center;
   }
 
   .site-footer__nav {
