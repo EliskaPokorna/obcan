@@ -819,6 +819,89 @@ input:-moz-autofill {
   padding-left: 1.1rem;
 }
 
+.container-cookies,
+.container-gdpr {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px;
+  line-height: 1.4;
+}
+
+.page {
+  background: #fff;
+  border: 1px solid #c9f3d6;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(2, 6, 23, 0.06);
+  padding: 32px;
+}
+
+.hl2 {
+  color: #005840;
+  text-decoration: underline !important;
+}
+.hl2:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  letter-spacing: -0.015em;
+  margin: 0 0 8px 0;
+  color: #005840;
+}
+
+.lead {
+  margin: 0;
+  color: #000000;
+  font-size: 1rem;
+}
+
+section {
+  margin: 28px 0;
+}
+
+h2 {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  margin: 0 0 10px 0;
+  color: #005840;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+.card {
+  background: #c9f3d6;
+  border: 1px solid #005840;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+  margin: 0 0 12px 0;
+}
+
+.cookie-types li {
+  margin-bottom: 8px;
+}
+
+.notice {
+  background: #c9f3d6;
+  border: 1px solid #005840;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.dots {
+  list-style-type: disc;
+}
+
+.li-adress {
+  padding: 20px 0;
+}
+
 [id] {
   scroll-margin-top: 140px;
 }
@@ -1034,7 +1117,7 @@ input:-moz-autofill {
   }
 }
 .hero .title .hl,
-.hero .title .hl2 {
+.hero .title .hl1 {
   position: relative;
   display: inline-block;
 }
@@ -1076,7 +1159,7 @@ input:-moz-autofill {
     width: 168px;
   }
 }
-.hero .title .hl2::after {
+.hero .title .hl1::after {
   content: "";
   position: absolute;
   left: -10px;
@@ -1089,25 +1172,25 @@ input:-moz-autofill {
   border-radius: 50px;
 }
 @media (min-width: 768px) {
-  .hero .title .hl2::after {
+  .hero .title .hl1::after {
     height: 45px;
     width: 160px;
   }
 }
 @media (min-width: 992px) {
-  .hero .title .hl2::after {
+  .hero .title .hl1::after {
     height: 62px;
     width: 215px;
   }
 }
 @media (min-width: 1200px) {
-  .hero .title .hl2::after {
+  .hero .title .hl1::after {
     height: 62px;
     width: 235px;
   }
 }
 @media (min-width: 1440px) {
-  .hero .title .hl2::after {
+  .hero .title .hl1::after {
     bottom: 15px;
     height: 70px;
     width: 270px;

@@ -71,7 +71,7 @@
   }
 
   .title .hl,
-  .title .hl2 {
+  .title .hl1 {
     position: relative;
     display: inline-block;
   }
@@ -111,7 +111,7 @@
     }
   }
 
-  .title .hl2::after {
+  .title .hl1::after {
     content: "";
     position: absolute;
     left: -10px;

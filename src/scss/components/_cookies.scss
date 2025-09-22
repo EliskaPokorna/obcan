@@ -302,3 +302,87 @@
 .cc-info ul {
   padding-left: 1.1rem;
 }
+
+.container-cookies,
+.container-gdpr {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px;
+  line-height: 1.4;
+}
+
+.page {
+  background: $white;
+  border: 1px solid $mint;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(2, 6, 23, 0.06);
+  padding: 32px;
+}
+
+.hl2 {
+  color: $brand-green;
+  text-decoration: underline !important;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  letter-spacing: -0.015em;
+  margin: 0 0 8px 0;
+  color: $brand-green;
+}
+
+.lead {
+  margin: 0;
+  color: $text;
+  font-size: 1rem;
+}
+
+section {
+  margin: 28px 0;
+}
+
+h2 {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  margin: 0 0 10px 0;
+  color: $brand-green;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+.card {
+  background: $mint;
+  border: 1px solid $brand-green;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+  margin: 0 0 12px 0;
+}
+
+.cookie-types li {
+  margin-bottom: 8px;
+}
+
+.notice {
+  background: $mint;
+  border: 1px solid $brand-green;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.dots {
+  list-style-type: disc;
+}
+
+.li-adress {
+  padding: 20px 0;
+}
