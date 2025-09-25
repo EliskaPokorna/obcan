@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /VOP
+Disallow: /cennik
+Disallow: /zdileniosobnichudaju
