@@ -1,3 +1,34 @@
+// Upraví href u loga na "skutečnou" titulku podle umístění tohoto souboru (main.js)
+(function () {
+  try {
+    // 1) Najdu právě běžící skript (main.js)
+    var script =
+      document.currentScript ||
+      Array.from(document.scripts).find(s => /\/js\/main\.js(\?.*)?$/.test(s.src));
+    if (!script) return;
+
+    var srcUrl = new URL(script.src, location.href);
+
+    // 2) Z cesty k main.js vytvořím base (odstraním "/js/main.js")
+    var basePath = srcUrl.pathname.replace(/\/js\/main\.js(\?.*)?$/, "/");
+    var homeUrl = srcUrl.origin + basePath; // např. http://localhost:8080/ nebo https://moje.cz/docs/
+
+    // 3) Přepíšu všechny loga na titulku
+    document.querySelectorAll(".logo a").forEach(a => {
+      a.setAttribute("href", homeUrl);
+      a.setAttribute("aria-label", "Zpět na titulní stránku");
+    });
+
+    // (volitelné) Zpřístupním base pro případné další použití
+    window.__SITE_BASE__ = homeUrl;
+  } catch (e) {
+    // tiché selhání – nic nezkazíme
+  }
+})();
+
+
+
+
 // Toggle mobilní menu
 const btn = document.querySelector('.menu-toggle');
 const nav = document.getElementById('mainNav');
